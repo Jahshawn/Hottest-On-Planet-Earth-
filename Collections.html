@@ -23,9 +23,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </a>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Shirts <i class="fa fa-caret-right"></i> </a>  
-    <a onclick="myAccFunc(event)" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      <div  class="w3-bar-block w3-hide w3-padding-large w3-medium submenu">
+    <a onclick="myAccFunc(event)" class="w3-bar-item w3-button">Shirts <i class="fa fa-caret-right"></i> </a>  
+      <div class="w3-bar-block w3-hide w3-padding-large w3-medium submenu">
       <a href="#" class="w3-bar-item w3-button">Distressed</a>
       <a href="#" class="w3-bar-item w3-button">Killa Camo Collection</a>
       <a href="#" class="w3-bar-item w3-button">RocketFILES Collection</a>
@@ -236,11 +235,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 // Accordion 
 function myAccFunc(event) {
   
-  
-    if (event.currentTarget.className.indexOf("w3-show") == -1) {
-      event.currentTarget.className += " w3-show";
+    if (event.currentTarget.nextElementSibling.className.indexOf("w3-show") == -1) {
+      event.currentTarget.nextElementSibling.className += " w3-show";
     } else {
-        event.currentTarget.className = event.currentTarget.replace(" w3-show", "");
+        event.currentTarget.nextElementSibling.className = event.currentTarget.nextElementSibling.className.replace(" w3-show", "");
     }
   
 }
